@@ -1,8 +1,11 @@
+import Reveal from "./animations/Reveal";
+
 function Hero() {
   return (
+    <Reveal>
     <section
       id="home"
-      className="relative h-screen bg-cover bg-center"
+      className="relative h-screen"
       style={{
         backgroundImage: "url('/images/hero.jpg')",
       }}
@@ -24,12 +27,16 @@ function Hero() {
             spaces that blend functionality with exceptional design.
           </p>
 
-          <button className="mt-10 rounded-md bg-white px-8 py-4 font-semibold text-black transition hover:bg-gray-200">
-            View Projects
-          </button>
+          <a
+          href="#projects"
+          className="mt-6 inline-flex items-center rounded-md bg-white px-8 py-4 text-black transition-all duration-300 hover:-translate-y-1 hover:bg-gray-100"
+          >
+          View Projects
+        </a>
         </div>
       </div>
     </section>
+    </Reveal>
   );
 }
 

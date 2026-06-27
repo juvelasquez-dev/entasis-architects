@@ -1,3 +1,4 @@
+import Reveal from "./animations/Reveal";
 import {
   PencilRuler,
   Building2,
@@ -34,6 +35,7 @@ function Services() {
   ];
 
   return (
+    <Reveal>
     <section id="services" className="bg-white py-36">
       <div className="mx-auto max-w-7xl px-6">
 
@@ -72,6 +74,7 @@ function Services() {
         </div>
       </div>
     </section>
+    </Reveal>
   );
 }
 

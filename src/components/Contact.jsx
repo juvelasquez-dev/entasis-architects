@@ -1,7 +1,9 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import Reveal from "./animations/Reveal";
 
 function Contact() {
   return (
+    <Reveal>
     <section id="contact" className="bg-zinc-900 py-32 text-white">
       <div className="mx-auto max-w-7xl px-6">
 
@@ -83,6 +85,7 @@ function Contact() {
 
       </div>
     </section>
+    </Reveal>
   );
 }
 

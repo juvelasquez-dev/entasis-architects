@@ -1,3 +1,5 @@
+import Reveal from "./animations/Reveal";
+
 function Projects() {
   const projects = [
     {
@@ -21,6 +23,7 @@ function Projects() {
   ];
 
   return (
+    <Reveal>
     <section
       id="projects"
       className="bg-gray-50 py-36"
@@ -87,6 +90,7 @@ function Projects() {
 
       </div>
     </section>
+    </Reveal>
   );
 }
 

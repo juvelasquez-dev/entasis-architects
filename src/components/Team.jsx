@@ -1,3 +1,5 @@
+import Reveal from "./animations/Reveal";
+
 function Team() {
   const members = [
     {
@@ -18,6 +20,7 @@ function Team() {
   ];
 
   return (
+    <Reveal>
     <section id="team" className="bg-gray-50 py-36">
       <div className="mx-auto max-w-7xl px-6">
         <p className="mb-4 text-sm uppercase tracking-[0.35em] text-gray-500">
@@ -57,6 +60,7 @@ function Team() {
         </div>
       </div>
     </section>
+    </Reveal>
   );
 }
 
