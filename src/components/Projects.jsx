@@ -1,30 +1,11 @@
 import Reveal from "./animations/Reveal";
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
+import projects from "../data/projects";
 
 function Projects() {
   const [openModal, setOpenModal] = useState(false);
-
-  const projects = [
-    {
-      title: "Modern Residence",
-      category: "Residential",
-      location: "Legazpi City",
-      image: "/images/project1.jpg",
-    },
-    {
-      title: "Contemporary Villa",
-      category: "Residential",
-      location: "Naga City",
-      image: "/images/project2.jpg",
-    },
-    {
-      title: "Commercial Building",
-      category: "Commercial",
-      location: "Albay",
-      image: "/images/project3.jpg",
-    },
-  ];
+  const [selected, setSelected] = useState(0);
 
   return (
     <Reveal>
@@ -43,15 +24,28 @@ function Projects() {
 
               <h2 className="max-w-2xl text-5xl font-bold leading-tight">
                 Selected works that
+                <br />
                 define our approach.
               </h2>
 
-              {/* View All Button */}
               <button
-                onClick={() => setOpenModal(true)}
-                className="hidden rounded-md border border-black px-6 py-3 text-sm font-medium uppercase tracking-wider transition-all duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:block"
+                onClick={() => {
+                  setSelected(0);
+                  setOpenModal(true);
+                }}
+                className="group hidden items-center gap-3 md:inline-flex"
               >
-                View All →
+                <span className="text-sm font-medium uppercase tracking-[0.25em] text-gray-700 transition-colors duration-300 group-hover:text-black">
+                  Explore Portfolio
+                </span>
+
+                <div className="relative">
+                  <span className="text-xl transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                  </span>
+
+                  <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+                </div>
               </button>
 
             </div>
@@ -60,8 +54,12 @@ function Projects() {
 
               {projects.map((project, index) => (
                 <div
-                  key={index}
-                  className="group overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                  key={project.id}
+                  onClick={() => {
+                    setSelected(index);
+                    setOpenModal(true);
+                  }}
+                  className="group cursor-pointer overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 >
                   <div className="overflow-hidden">
 
@@ -97,11 +95,14 @@ function Projects() {
           </div>
         </section>
 
-        {/* Project Modal */}
         <ProjectModal
           open={openModal}
           onClose={() => setOpenModal(false)}
+          selected={selected}
+          setSelected={setSelected}
+          projects={projects}
         />
+
       </>
     </Reveal>
   );

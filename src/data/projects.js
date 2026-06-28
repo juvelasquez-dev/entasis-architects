@@ -1,38 +1,36 @@
 const projects = [
   {
     id: 1,
-    title: "Modern Tropical Residence",
+    title: "Modern Residence",
+    category: "Residential",
+    location: "Legazpi City",
     image: "/images/project1.jpg",
-    location: "Legazpi City, Albay",
-    type: "Residential",
     year: "2025",
     area: "280 sqm",
     description:
-      "A contemporary tropical residence designed to maximize natural lighting, cross ventilation, and seamless indoor-outdoor living while maintaining a minimalist architectural language.",
+      "A contemporary tropical residence designed to maximize natural ventilation, daylight, and seamless indoor-outdoor living. The design combines clean geometry with warm natural materials to create a timeless family home.",
   },
-
   {
     id: 2,
-    title: "Community Worship Center",
+    title: "Contemporary Villa",
+    category: "Residential",
+    location: "Naga City",
     image: "/images/project2.jpg",
-    location: "Daraga, Albay",
-    type: "Institutional",
     year: "2024",
-    area: "450 sqm",
+    area: "350 sqm",
     description:
-      "A modern place of worship emphasizing openness, simplicity, and natural illumination to create a peaceful and welcoming environment for the community.",
+      "A luxury villa emphasizing open spaces, floor-to-ceiling glazing, and a minimalist architectural language that connects the interiors with the surrounding landscape.",
   },
-
   {
     id: 3,
-    title: "Executive Family Home",
+    title: "Commercial Building",
+    category: "Commercial",
+    location: "Albay",
     image: "/images/project3.jpg",
-    location: "Sorsogon City",
-    type: "Residential",
     year: "2025",
-    area: "340 sqm",
+    area: "920 sqm",
     description:
-      "A two-storey executive residence featuring clean geometric forms, spacious interiors, sustainable materials, and carefully designed outdoor spaces.",
+      "A modern commercial development featuring flexible office spaces, sustainable design strategies, and a bold contemporary façade that becomes a local landmark.",
   },
 ];
 
